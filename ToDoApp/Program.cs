@@ -51,7 +51,10 @@ do {
                  Console.WriteLine($"[{i}] {toDoList[i].Print()}");
              }
              int selection = int.Parse(Console.ReadLine());
-             Console.WriteLine($"You Picked [{selection}] {toDoList[selection].Print()}");
+
+             ToDoItem itemToComplete = toDoList[selection];
+             itemToComplete.CompleteItem();
+             Console.WriteLine($"You Picked [{selection}] {itemToComplete.Print()}");
         break;
         case "x":
             exit = true;
