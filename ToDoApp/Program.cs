@@ -35,20 +35,27 @@ do {
             newItem.Note = newNote;
 
             toDoList.Add(newItem);
-            Console.WriteLine("You created the following item: ");
+            Console.WriteLine("\nYou created the following item: ");
             Console.WriteLine(newItem.Print());
         break;
         case "2":   
+            Console.WriteLine("");
             foreach(ToDoItem item in toDoList)
             {
-                Console.WriteLine(item.Print());
+                Console.WriteLine($"{item.Print()}");
             }
         break;
         case "3": 
-            Console.WriteLine("Completing an item");
+             Console.WriteLine("Choose an item to complete:");
+             for (int i=0; i < toDoList.Count; i++) {
+                 Console.WriteLine($"[{i}] {toDoList[i].Print()}");
+             }
+             int selection = int.Parse(Console.ReadLine());
+             Console.WriteLine($"You Picked [{selection}] {toDoList[selection].Print()}");
         break;
         case "x":
             exit = true;
+            Console.WriteLine("Goodbye!");
         break;
         default:
             Console.WriteLine("I'm not sure what that was");
