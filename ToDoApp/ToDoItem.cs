@@ -25,7 +25,7 @@ public class ToDoItem {
     //Method signature goes: Access Modifier, return type, method name, paramaters/arguments
     public string Print(){
         //String interpolation
-        return $"Done: {this.IsDone} Note: {this.Note}";
+        return $"Note: {this.Note}, Done: {this.IsDone} ";
     }
 
 }
