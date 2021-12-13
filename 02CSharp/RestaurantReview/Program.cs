@@ -17,11 +17,18 @@ while(!exit){
     Console.WriteLine("State: ");
     string state = Console.ReadLine();
 
-    Restaurant newResto = new Restaurant();
+    // Restaurant newResto = new Restaurant();
 
-    newResto.Name = name;
-    newResto.City = city;
-    newResto.State = state;
+    // newResto.Name = name;
+    // newResto.City = city;
+    // newResto.State = state;
+
+    //using object initializer
+    Restaurant newResto = new Restaurant{
+        Name = name,
+        City = city,
+        State = state
+    };
 
     allRestaurants.Add(newResto);
 
