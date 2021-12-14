@@ -9,6 +9,14 @@ public class Restaurant {
     //By default, class member has private access modifier
     //Class by default are internal
 
+    public Restaurant(){
+        this.Reviews = new List<Review>();
+    }
+    public Restaurant(string name){
+        this.Reviews = new List<Review>();
+        this.Name = name;
+    }
+
     public string Name { get; set; }
 
     // private string _name;
@@ -23,6 +31,8 @@ public class Restaurant {
     public string City { get; set; }
 
     public string State { get; set; }
+
+    public List<Review> Reviews { get; }
 
 
 }
