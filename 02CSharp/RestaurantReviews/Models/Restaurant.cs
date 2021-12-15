@@ -10,10 +10,10 @@ public class Restaurant {
     //Class by default are internal
 
     public Restaurant(){
-        this.Reviews = new List<Review>();
+        // this.Reviews = new List<Review>();
     }
     public Restaurant(string name){
-        this.Reviews = new List<Review>();
+        // this.Reviews = new List<Review>();
         this.Name = name;
     }
 
@@ -32,7 +32,7 @@ public class Restaurant {
 
     public string State { get; set; }
 
-    public List<Review> Reviews { get; }
+    public List<Review> Reviews { get; set; }
 
 
 }
