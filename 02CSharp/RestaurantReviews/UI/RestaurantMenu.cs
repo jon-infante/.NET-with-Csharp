@@ -44,10 +44,10 @@ public class RestaurantMenu {
                             Console.WriteLine("No restaurants found :/");
                         }
                         else{
-                        Console.WriteLine("Here is all your restaurants!");
-                        foreach(Restaurant resto in _bl.GetAllRestaurants()){
+                        Console.WriteLine("Here are all your restaurants!");
+                        foreach(Restaurant resto in allRestaurants){
                             Console.WriteLine($"Restaurant: {resto.Name} \nCity: {resto.City} \nState: {resto.State}");
-                            if (resto.Reviews.Count > 0){
+                            if (resto.Reviews != null && resto.Reviews.Count > 0){
 
                             Console.WriteLine("=====Reviews=====");
                             foreach(Review review in resto.Reviews){
