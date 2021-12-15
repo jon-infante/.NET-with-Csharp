@@ -2,5 +2,5 @@
 
 //initialize list of restaurants
 
-DictionaryClass dictRep = new DictionaryClass();
-dictRep.Start();
+DictionaryClass diction = new DictionaryClass();
+diction.Start();
